@@ -20,6 +20,16 @@ Portfolio React (Create React App) avec Framer Motion, thème light/dark et sect
 - `npm run build` — build production
 - `npm test` — CRA tests (passent même sans fichiers de test)
 
+### Emails (EmailJS)
+- Ajoute un fichier `.env` à la racine avec :
+  - `REACT_APP_EMAILJS_SERVICE_ID=...`
+- `REACT_APP_EMAILJS_TEMPLATE_ID=...`
+- `REACT_APP_EMAILJS_PUBLIC_KEY=...`
+- Les champs du formulaire enverront alors directement vers ta boîte Gmail via EmailJS. Sans ces variables, un mailto de secours s’ouvre.
+
+### Profil centralisé
+- `src/data/profile.js` contient nom, titre, email, téléphone, liens (GitHub/LinkedIn) et URL du CV ; utilisés par le hero et la section contact.
+
 ## Personnalisation
 - Mettre à jour projets/skills dans `src/data/*`
 - Palette & typo dans `src/index.css`

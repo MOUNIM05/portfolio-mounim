@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
+import { profile } from '../data/profile';
 
 export default function HeroSection() {
   const tiltX = useMotionValue(0);
@@ -29,7 +30,7 @@ export default function HeroSection() {
       <div className="container hero__grid">
         <div className="hero__text">
           <motion.p className="kicker hero__kicker" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
-            Abdelmounim Maani — Software Developer
+            {profile.name} — {profile.title}
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -48,9 +49,9 @@ export default function HeroSection() {
           </motion.p>
           <motion.div className="hero__actions" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.25 }}>
             <Link to="/projects" className="btn btn-primary">Voir mes projets</Link>
-            <a href="/cvmounim.pdf" download className="btn">Mon CV</a>
+            <a href={profile.cv} download className="btn">Mon CV</a>
             <a href="#contact" className="btn btn-ghost">Me contacter</a>
-            <a href="https://www.linkedin.com/in/abdel-mounim-maani-721321302/" className="btn btn-ghost" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href={profile.linkedin} className="btn btn-ghost" target="_blank" rel="noreferrer">LinkedIn</a>
           </motion.div>
         </div>
         <motion.div
@@ -73,15 +74,15 @@ export default function HeroSection() {
           >
             <span>À propos</span>
             <strong>Étudiant (Université Mundiapolis, Casablanca) avec une appétence pour le code, le design et les systèmes.</strong>
-            <div className="hero__pill">Disponibilité: Projets & alternance</div>
+            <div className="hero__pill">Disponibilité: {profile.availability}</div>
             <motion.div
               className="hero__floating"
               animate={{ y: [0, -12, 0], rotateZ: [0, 1, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <div className="hero__chip">+212 626 262 455</div>
-              <div className="hero__chip hero__chip--alt">abdelmounimma2005@gmail.com</div>
-              <div className="hero__chip">Casablanca</div>
+              <div className="hero__chip">{profile.phone}</div>
+              <div className="hero__chip hero__chip--alt">{profile.email}</div>
+              <div className="hero__chip">{profile.location}</div>
             </motion.div>
           </motion.div>
         </motion.div>
