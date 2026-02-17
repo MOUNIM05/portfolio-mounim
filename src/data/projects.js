@@ -24,7 +24,7 @@ export const projects = [
     subtitle: 'UI Figma + Balsamiq',
     desc: 'Maquettes basse puis haute fidélité pour une application de streaming musical (parcours découverte et lecture).',
     tech: ['Figma', 'Balsamiq'],
-    image: '/assets/project2.webp',
+    image: '/assets/streaming-ui.png',
     github: '',
     live: '',
     timeline: '2024',
@@ -34,7 +34,7 @@ export const projects = [
       challenge: 'Aligner rapidité d’accès aux playlists et identité visuelle cohérente.',
       solution: 'Wireframes Balsamiq, puis UI Figma avec composants et typographie musicale.',
       impact: 'Handoff propre pour implémentation Flutter/React Native.',
-      media: ['/assets/project2.webp']
+      media: ['/assets/streaming-ui.png']
     }
   },
   {
@@ -43,7 +43,7 @@ export const projects = [
     subtitle: 'Frontend React',
     desc: 'Single page animée pour un restaurant avec menu, réservation et mise en avant du chef.',
     tech: ['React', 'CSS'],
-    image: '/assets/project3.webp',
+    image: '/assets/restaurant-site.png',
     github: '',
     live: '',
     timeline: '2023',
@@ -53,7 +53,7 @@ export const projects = [
       challenge: 'Rendre le contenu lisible et rassurant (horaires, contact, carte).',
       solution: 'Composants réutilisables, framer-motion pour les transitions, ancrages vers contact.',
       impact: 'Base réutilisable pour connecter un formulaire de réservation.',
-      media: ['/assets/project3.webp']
+      media: ['/assets/restaurant-site.png']
     }
   }
 ];

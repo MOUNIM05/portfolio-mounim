@@ -1,7 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 export default function ProjectCard({ project }) {
+  const navigate = useNavigate();
+
+  const goDetail = () => navigate(`/projects/${project.id}`);
+  const stop = (e) => e.stopPropagation();
+
   return (
     <motion.article
       className="project-card"
@@ -11,6 +16,11 @@ export default function ProjectCard({ project }) {
       viewport={{ once: true, amount: 0.35 }}
       whileHover={{ y: -10, rotateX: 6, rotateY: -6, boxShadow: '0 30px 90px rgba(0,0,0,0.45)' }}
       transition={{ type: 'spring', stiffness: 180, damping: 18 }}
+      onClick={goDetail}
+      tabIndex={0}
+      onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && goDetail()}
+      role="button"
+      aria-label={`Ouvrir le projet ${project.title}`}
     >
       <motion.div className="project-card__thumb" whileHover={{ scale: 1.04 }} transition={{ duration: 0.4, ease: 'easeOut' }}>
         <img src={project.image} alt={project.title} loading="lazy" />
@@ -28,11 +38,13 @@ export default function ProjectCard({ project }) {
             ))}
           </div>
           <div className="project-card__links">
-            <a href={project.github} target="_blank" rel="noreferrer">GitHub</a>
-            {project.live && (
-              <a href={project.live} target="_blank" rel="noreferrer">Live</a>
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noreferrer" onClick={stop}>GitHub</a>
             )}
-            <Link to={`/projects/${project.id}`}>Case study</Link>
+            {project.live && (
+              <a href={project.live} target="_blank" rel="noreferrer" onClick={stop}>Live</a>
+            )}
+            <Link to={`/projects/${project.id}`} onClick={stop}>Case study</Link>
           </div>
         </div>
       </div>
