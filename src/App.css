@@ -47,11 +47,21 @@
 .skills { padding: 18px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); }
 .skills__group { margin-bottom: 12px; }
 
-.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+.contact { display: grid; gap: 28px; align-items: start; }
+.contact--grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
 .contact__links { display: flex; gap: 12px; flex-wrap: wrap; }
-.contact__form { display: grid; gap: 12px; padding: 18px; border: 1px solid var(--border); background: var(--surface); border-radius: 18px; }
-.contact__form input, .contact__form textarea { width: 100%; padding: 12px; border-radius: 12px; border: 1px solid var(--border); background: var(--bg-alt); color: var(--text); }
-:root[data-theme='light'] .contact__form input, :root[data-theme='light'] .contact__form textarea { background: white; }
+.contact__intro { display: grid; gap: 14px; }
+.contact__primary { display: grid; gap: 8px; }
+.contact__cta { display: inline-flex; align-items: center; gap: 8px; padding: 14px 18px; border-radius: 14px; border: 1px solid var(--border); background: linear-gradient(120deg, rgba(124,58,237,0.15), rgba(34,211,238,0.12)); color: var(--text); font-weight: 700; }
+.contact__card { padding: 20px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); display: grid; gap: 10px; }
+.contact__badges { display: flex; gap: 8px; flex-wrap: wrap; }
+.contact__channels { display: grid; gap: 14px; padding: 16px; border-radius: 16px; border: 1px solid var(--border); background: var(--surface); box-shadow: var(--shadow); }
+.contact__channel { display: grid; gap: 6px; }
+.contact__pill { display: inline-flex; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-alt); color: var(--text); }
+.contact__formbox { padding: 20px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); display: grid; gap: 12px; }
+.contact__formbox input, .contact__formbox textarea { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--border); background: var(--bg-alt); color: var(--text); }
+:root[data-theme='light'] .contact__formbox input, :root[data-theme='light'] .contact__formbox textarea { background: white; }
+.contact__formbox .btn-primary { justify-content: center; }
 
 .case { display: grid; gap: 28px; }
 .case__content { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
