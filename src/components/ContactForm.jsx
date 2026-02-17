@@ -10,7 +10,7 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSent(true);
-    window.location.href = `mailto:hello@portfolio.com?subject=Projet%20-%20${encodeURIComponent(
+    window.location.href = `mailto:abdelmounimma2005@gmail.com?subject=Projet%20-%20${encodeURIComponent(
       form.name || 'Portfolio'
     )}&body=${encodeURIComponent(form.message)}%0A%0A${encodeURIComponent(form.email)}`;
   };
@@ -23,8 +23,10 @@ export default function ContactForm() {
           <h2>Parlons projet.</h2>
           <p className="lead">Basé à Casablanca, ouvert aux missions freelance/alternance.</p>
           <div className="contact__links">
-            <a href="tel:+212626262455">+212 626 262 455</a>
-            <a href="mailto:abdelmounimma2005@gmail.com">abdelmounimma2005@gmail.com</a>
+            <a href="tel:+212626262455">Téléphone</a>
+            <a href="mailto:abdelmounimma2005@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/abdel-mounim-maani-721321302/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/MOUNIM05" target="_blank" rel="noreferrer">GitHub</a>
             <a href="/cvmounim.pdf" download target="_blank" rel="noreferrer">CV (PDF)</a>
           </div>
         </div>

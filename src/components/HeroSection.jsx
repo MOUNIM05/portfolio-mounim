@@ -50,6 +50,7 @@ export default function HeroSection() {
             <Link to="/projects" className="btn btn-primary">Voir mes projets</Link>
             <a href="/cvmounim.pdf" download className="btn">Mon CV</a>
             <a href="#contact" className="btn btn-ghost">Me contacter</a>
+            <a href="https://www.linkedin.com/in/abdel-mounim-maani-721321302/" className="btn btn-ghost" target="_blank" rel="noreferrer">LinkedIn</a>
           </motion.div>
         </div>
         <motion.div
