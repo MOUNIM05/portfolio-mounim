@@ -37,7 +37,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
           >
-            Étudiant en informatique appliquée, je crée des interfaces <span className="accent">modernes</span> qui livrent.
+            Étudiant en informatique appliquée, je crée des interfaces <span className="accent">modernes</span> .
           </motion.h1>
           <motion.p
             className="lead"

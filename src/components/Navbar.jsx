@@ -22,7 +22,7 @@ export default function Navbar({ theme, onToggleTheme }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            PORTFOLIO
+            PORTFOLIO ABDEL MOUNIM
           </motion.span>
         </Link>
         <button className="navbar__burger" onClick={() => setOpen(!open)} aria-label="Menu">
