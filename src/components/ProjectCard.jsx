@@ -39,10 +39,10 @@ export default function ProjectCard({ project }) {
           </div>
           <div className="project-card__links">
             {project.github && (
-              <a href={project.github} target="_blank" rel="noreferrer" onClick={stop}>GitHub</a>
+              <a href={project.github} target="_blank" rel="noopener noreferrer" onClick={stop}>GitHub</a>
             )}
             {project.live && (
-              <a href={project.live} target="_blank" rel="noreferrer" onClick={stop}>Live</a>
+              <a href={project.live} target="_blank" rel="noopener noreferrer" onClick={stop}>Live</a>
             )}
             <Link to={`/projects/${project.id}`} onClick={stop}>Case study</Link>
           </div>

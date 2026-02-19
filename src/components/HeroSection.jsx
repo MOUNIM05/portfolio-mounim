@@ -51,7 +51,7 @@ export default function HeroSection() {
             <Link to="/projects" className="btn btn-primary">Voir mes projets</Link>
             <a href={profile.cv} download className="btn">Mon CV</a>
             <a href="#contact" className="btn btn-ghost">Me contacter</a>
-            <a href={profile.linkedin} className="btn btn-ghost" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href={profile.linkedin} className="btn btn-ghost" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </motion.div>
         </div>
         <motion.div

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 import { profile } from '../data/profile';
 
 export default function ContactForm() {
@@ -11,36 +10,13 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-    const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-    const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
-
-    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
-      window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(
-        form.subject || 'Demande de devis'
-      )}&body=${encodeURIComponent(
-        `Nom: ${form.name}\nEmail: ${form.email}\n\n${form.message || 'Votre message ici'}`
-      )}`;
-      return;
-    }
-
-    setStatus({ sending: true, sent: false, error: '' });
-    emailjs
-      .send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
-          from_name: form.name,
-          reply_to: form.email,
-          subject: form.subject,
-          message: form.message
-        },
-        { publicKey: PUBLIC_KEY }
-      )
-      .then(
-        () => setStatus({ sending: false, sent: true, error: '' }),
-        () => setStatus({ sending: false, sent: false, error: 'Envoi impossible, réessayez plus tard.' })
-      );
+    const mailto = `mailto:${profile.email}?subject=${encodeURIComponent(
+      form.subject || 'Demande de devis'
+    )}&body=${encodeURIComponent(
+      `Nom: ${form.name}\nEmail: ${form.email}\n\n${form.message || 'Votre message ici'}`
+    )}`;
+    window.location.href = mailto;
+    setStatus({ sending: false, sent: true, error: '' });
   };
 
   return (
@@ -98,9 +74,9 @@ export default function ContactForm() {
             <div className="contact__channel">
               <p className="muted">Réseaux</p>
               <div className="contact__links">
-                <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
-                <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-                <a href={profile.cv} download target="_blank" rel="noreferrer">CV (PDF)</a>
+                <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href={profile.cv} download target="_blank" rel="noopener noreferrer">CV (PDF)</a>
               </div>
             </div>
           </motion.div>

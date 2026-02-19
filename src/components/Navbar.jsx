@@ -17,6 +17,14 @@ export default function Navbar({ theme, onToggleTheme }) {
     <header className="navbar">
       <div className="container navbar__inner">
         <Link to="/" className="navbar__brand">
+          <motion.img
+            src="/core-logo.png"
+            alt="Logo"
+            className="navbar__logo"
+            initial={{ opacity: 0, scale: 0.9, y: -6 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          />
           <motion.span
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
