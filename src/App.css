@@ -2,7 +2,6 @@
 :root[data-theme='light'] .navbar { background: rgba(248,250,252,0.7); }
 .navbar__inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
 .navbar__brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: -0.02em; }
-.navbar__logo { width: 44px; height: 44px; object-fit: contain; mix-blend-mode: screen; filter: drop-shadow(0 0 10px rgba(124,58,237,0.7)); }
 .navbar__nav { display: flex; align-items: center; gap: 16px; }
 .navbar__link { padding: 8px 12px; border-radius: 10px; color: var(--muted); }
 .navbar__link.active, .navbar__link:hover { color: var(--text); background: var(--surface); }

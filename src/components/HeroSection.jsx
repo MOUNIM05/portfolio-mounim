@@ -30,7 +30,7 @@ export default function HeroSection() {
       <div className="container hero__grid">
         <div className="hero__text">
           <motion.p className="kicker hero__kicker" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
-            {profile.name} — {profile.title}
+            {profile.name}
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
