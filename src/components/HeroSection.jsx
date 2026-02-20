@@ -37,7 +37,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
           >
-            Étudiant en informatique appliquée, je crée des interfaces <span className="accent">modernes</span> .
+            UI/UX Designer & Software Developer <span className="accent"></span> .
           </motion.h1>
           <motion.p
             className="lead"
@@ -45,7 +45,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
           >
-            Passionné de dev et design (React, Flutter, Figma), je cherche à renforcer mes compétences techniques en livrant des projets concrets.
+            Product Designer & Software Developer spécialisé dans la création d’expériences digitales complètes, de la conception à l’implémentation.
           </motion.p>
           <motion.div className="hero__actions" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.25 }}>
             <Link to="/projects" className="btn btn-primary">Voir mes projets</Link>
