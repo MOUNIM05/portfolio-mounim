@@ -6,6 +6,6 @@ export const profile = {
   location: 'Casablanca, Maroc',
   linkedin: 'https://www.linkedin.com/in/abdel-mounim-maani-721321302/',
   github: 'https://github.com/MOUNIM05',
-  cv: '/cvmounim.pdf',
+  cv: '/abdelmounim-maani-CV.pdf',
   availability: 'Freelance · Alternance · Projets courts'
 };
